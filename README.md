@@ -8,7 +8,7 @@ cd cmake/build
 cmake ../..
 make -j 8
 cd ../../examples/
-git clone https://github.com/drankincms/grpc-trt-fgpa.git
+git clone --recurse-submodules https://github.com/jmduarte/grpc-trt-fgpa -b alveo
 cd grpc-trt-fgpa
 make
 ./server hls4ml_c/xclbin/alveo_hls4ml.hw.xilinx_u250_xdma_201830_2.xclbin

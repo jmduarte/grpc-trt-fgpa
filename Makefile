@@ -1,10 +1,6 @@
 #note the compile for below needs to be pointed in the right direction
-LDFLAGS = -Wl,-rpath,/usr/local/lib\
- -L/usr/local/lib \
- -lgrpc++_unsecure -lgrpc -lupb -lprotobuf -lpthread -lgrpc_unsecure -lgpr \
- -lcares -lgrpc_plugin_support -lssl -lcrypto  -lz -labsl_strings -labsl_base -labsl_throw_delegate \
- $(opencl_LDFLAGS)\
- -lnsl -laddress_sorting -ldl -lm
+LDFLAGS = -Wl,-rpath,/usr/local/lib -L/usr/local/lib /usr/local/lib/libgrpc++_unsecure.a /usr/local/lib64/libprotobuf.a -lpthread /usr/local/lib/libgrpc_unsecure.a /usr/local/lib/libgpr.a /usr/local/lib/libz.so /usr/local/lib/libcares.so.2.3.0 -lnsl /usr/local/lib/libaddress_sorting.a $(opencl_LDFLAGS) -ldl -lm -lrt -lupb `pkg-config --libs protobuf grpc++`
+
 
 COMMON_REPO := ./hls4ml_c/
 

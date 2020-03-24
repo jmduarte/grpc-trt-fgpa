@@ -1,7 +1,7 @@
 
 Install grpc
 ```
-git clone https://github.com/grpc/grpc
+git clone https://github.com/grpc/grpc -b v1.27.0
 cd grpc
 git checkout -b v1.27.0
 git submodule update --init
